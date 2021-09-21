@@ -1,0 +1,9 @@
+services:
+  stream-one:
+    build: .
+    env_file: .env
+    entrypoint: ffmpeg -re -i ${STREAM_ONE_FILE} -c copy -f flv ${STREAM_ONE_RMTP}
+  stream-two:
+    build: .
+    env_file: .env
+    entrypoint: ffmpeg -re -i ${STREAM_TWO_FILE} -c copy -f flv ${STREAM_TWO_RMTP}
