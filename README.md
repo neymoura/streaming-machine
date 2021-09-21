@@ -18,6 +18,12 @@ The `STREAM_x_FILE` is the file wich will be streamed to the `STREAM_x_RMTP` url
 
 > :info: By default, the docker compose file will read and stream those two streams. Feel free to change this as needed.
 
+## Video samples
+
+Please add your video files in the `/videos` directory and specify those files in the `.env` file.
+
+> :info: .flv files are preferred for greater performance
+
 ## Run compose
 
 Just run:
