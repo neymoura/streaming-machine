@@ -1,4 +1,4 @@
-# A RMTP streaming ready image with demo content with ffmpeg
+# A RMTP streaming ready image with demo content using ffmpeg
 
 This docker image is targeted to provide ready streaming content along with ffmpeg.
 
