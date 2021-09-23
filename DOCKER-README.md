@@ -2,10 +2,12 @@
 
 This docker image is targeted to provide ready streaming content along with ffmpeg.
 
-Based on the
-[opencoconut/ffmpeg](https://hub.docker.com/r/opencoconut/ffmpeg) image developed by **Bruno Celeste** (@brunoceleste)
+Developed by: **Ney Moura**
 
 Available at GitHub: [neymoura/streaming-machine](https://github.com/neymoura/streaming-machine)
+
+Based on the
+[opencoconut/ffmpeg](https://hub.docker.com/r/opencoconut/ffmpeg) image developed by Bruno Celeste (@brunoceleste)
 
 # Available content
 
