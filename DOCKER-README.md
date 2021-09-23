@@ -5,6 +5,8 @@ This docker image is targeted to provide ready streaming content along with ffmp
 Based on the
 [opencoconut/ffmpeg](https://hub.docker.com/r/opencoconut/ffmpeg) image developed by **Bruno Celeste** (@brunoceleste)
 
+Available at GitHub: [neymoura/streaming-machine](https://github.com/neymoura/streaming-machine)
+
 # Available content
 
 - Big Buck Bunny:
