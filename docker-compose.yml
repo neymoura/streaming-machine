@@ -1,9 +1,9 @@
 services:
   stream-one:
-    build: .
+    image: neymoura/streaming-machine:1.0.0
     env_file: .env
     entrypoint: ffmpeg -re -i ${STREAM_ONE_FILE} -c copy -f flv ${STREAM_ONE_RMTP}
   stream-two:
-    build: .
+    image: neymoura/streaming-machine:1.0.0
     env_file: .env
     entrypoint: ffmpeg -re -i ${STREAM_TWO_FILE} -c copy -f flv ${STREAM_TWO_RMTP}
