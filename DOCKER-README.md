@@ -23,18 +23,22 @@ Available at GitHub: [neymoura/streaming-machine](https://github.com/neymoura/st
 
 General usage:
 ```shell
-$ docker run neymoura/streaming-machine ffmpeg -re -i ${STREAM_FILE} -c copy -f flv ${STREAM_RMTP}
+$ docker run neymoura/streaming-machine:1.0.0 ffmpeg -re -i ${STREAM_FILE} -c copy -f flv ${STREAM_RMTP}
 ```
 
 Big Buck Bunny:
 ```shell
-$ docker run neymoura/streaming-machine ffmpeg -re -i /streaming/videos/bbb.flv -c copy -f flv ${STREAM_RMTP}
+$ docker run neymoura/streaming-machine:1.0.0 ffmpeg -re -i /streaming/videos/bbb.flv -c copy -f flv ${STREAM_RMTP}
 ```
 
 Sintel:
 ```shell
-$ docker run neymoura/streaming-machine ffmpeg -re -i /streaming/videos/sintel.flv -c copy -f flv ${STREAM_RMTP}
+$ docker run neymoura/streaming-machine:1.0.0 ffmpeg -re -i /streaming/videos/sintel.flv -c copy -f flv ${STREAM_RMTP}
 ```
+
+## Important
+
+Remember to replace the ${STREAM_RMTP} with your RMTP Url :)
 
 # Using docker compose
 
@@ -43,7 +47,6 @@ Running one stream:
 services:
   streaming-machine:
     image: neymoura/streaming-machine:1.0.0
-    env_file: .env
     entrypoint: ffmpeg -re -i /streaming/videos/sintel.flv -c copy -f flv ${STREAM_RMTP}
 ```
 
@@ -52,13 +55,15 @@ Running two streams:
 services:
   stream-one:
     image: neymoura/streaming-machine:1.0.0
-    env_file: .env
     entrypoint: ffmpeg -re -i /streaming/videos/sintel.flv -c copy -f flv ${STREAM_ONE_RMTP}
   stream-two:
     image: neymoura/streaming-machine:1.0.0
-    env_file: .env
     entrypoint: ffmpeg -re -i /streaming/videos/bbb.flv -c copy -f flv ${STREAM_TWO_RMTP}
 ```
+
+## Important
+
+Remember to replace the ${STREAM_RMTP} with your RMTP Url :)
 
 # Author
 
