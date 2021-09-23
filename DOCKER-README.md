@@ -23,22 +23,18 @@ Available at GitHub: [neymoura/streaming-machine](https://github.com/neymoura/st
 
 General usage:
 ```shell
-$ docker run neymoura/streaming-machine:1.0.0 ffmpeg -re -i ${STREAM_FILE} -c copy -f flv ${STREAM_RMTP}
+$ docker run neymoura/streaming-machine:1.0.0 ffmpeg -re -i STREAM_FILE -c copy -f flv YOUR_STREAM_RMTP_URL
 ```
 
 Big Buck Bunny:
 ```shell
-$ docker run neymoura/streaming-machine:1.0.0 ffmpeg -re -i /streaming/videos/bbb.flv -c copy -f flv ${STREAM_RMTP}
+$ docker run neymoura/streaming-machine:1.0.0 ffmpeg -re -i /streaming/videos/bbb.flv -c copy -f flv YOUR_STREAM_RMTP_URL
 ```
 
 Sintel:
 ```shell
-$ docker run neymoura/streaming-machine:1.0.0 ffmpeg -re -i /streaming/videos/sintel.flv -c copy -f flv ${STREAM_RMTP}
+$ docker run neymoura/streaming-machine:1.0.0 ffmpeg -re -i /streaming/videos/sintel.flv -c copy -f flv YOUR_STREAM_RMTP_URL
 ```
-
-## Important
-
-Remember to replace the ${STREAM_RMTP} with your RMTP Url :)
 
 # Using docker compose
 
@@ -47,7 +43,7 @@ Running one stream:
 services:
   streaming-machine:
     image: neymoura/streaming-machine:1.0.0
-    entrypoint: ffmpeg -re -i /streaming/videos/sintel.flv -c copy -f flv ${STREAM_RMTP}
+    entrypoint: ffmpeg -re -i /streaming/videos/sintel.flv -c copy -f flv YOUR_STREAM_RMTP_URL
 ```
 
 Running two streams:
@@ -55,15 +51,11 @@ Running two streams:
 services:
   stream-one:
     image: neymoura/streaming-machine:1.0.0
-    entrypoint: ffmpeg -re -i /streaming/videos/sintel.flv -c copy -f flv ${STREAM_ONE_RMTP}
+    entrypoint: ffmpeg -re -i /streaming/videos/sintel.flv -c copy -f flv YOUR_FIRST_STREAM_RMTP_URL
   stream-two:
     image: neymoura/streaming-machine:1.0.0
-    entrypoint: ffmpeg -re -i /streaming/videos/bbb.flv -c copy -f flv ${STREAM_TWO_RMTP}
+    entrypoint: ffmpeg -re -i /streaming/videos/bbb.flv -c copy -f flv YOUR_SECOND_STREAM_RMTP_URL
 ```
-
-## Important
-
-Remember to replace the ${STREAM_RMTP} with your RMTP Url :)
 
 # Author
 
